@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="African Community Northern Territory (AFCOM NT) — celebrating diversity, talent and unity through community programs and the Annual African Cup of Nations (AFCON NT) tournament in Darwin." />
+  <title>AFCOM NT — African Community Northern Territory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <img src="assets/logo.jpeg" alt="" />
+    </div>
+  </div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Side rail navigator (desktop) -->
+  <aside class="side-rail" id="sideRail" aria-label="Section navigator">
+    <ol>
+      <li><a href="#about" data-section="about" data-cursor="hover"><span class="rail-num">01</span><span class="rail-label">About</span><span class="rail-tick"></span></a></li>
+      <li><a href="#afcon" data-section="afcon" data-cursor="hover"><span class="rail-num">02</span><span class="rail-label">AFCON</span><span class="rail-tick"></span></a></li>
+      <li><a href="#afcom-events" data-section="afcom-events" data-cursor="hover"><span class="rail-num">03</span><span class="rail-label">Programs</span><span class="rail-tick"></span></a></li>
+      <li><a href="#sponsors" data-section="sponsors" data-cursor="hover"><span class="rail-num">04</span><span class="rail-label">Sponsors</span><span class="rail-tick"></span></a></li>
+      <li><a href="#register" data-section="register" data-cursor="hover"><span class="rail-num">05</span><span class="rail-label">Register</span><span class="rail-tick"></span></a></li>
+      <li><a href="#membership" data-section="membership" data-cursor="hover"><span class="rail-num">06</span><span class="rail-label">Membership</span><span class="rail-tick"></span></a></li>
+      <li><a href="#leadership" data-section="leadership" data-cursor="hover"><span class="rail-num">07</span><span class="rail-label">Team</span><span class="rail-tick"></span></a></li>
+      <li><a href="#contact" data-section="contact" data-cursor="hover"><span class="rail-num">08</span><span class="rail-label">Contact</span><span class="rail-tick"></span></a></li>
+    </ol>
+  </aside>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="AFCOM NT home" data-cursor="hover">
+        <img src="assets/logo.jpeg" alt="AFCOM NT logo" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-line-1">AFCOM</span>
+          <span class="brand-line-2">Northern Territory</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#about" data-cursor="hover">About</a></li>
+          <li><a href="#afcon" data-cursor="hover">AFCON</a></li>
+          <li><a href="#afcom-events" data-cursor="hover">Programs</a></li>
+          <li><a href="#sponsors" data-cursor="hover">Sponsors</a></li>
+          <li><a href="#register" data-cursor="hover">Register</a></li>
+          <li><a href="#membership" data-cursor="hover">Membership</a></li>
+          <li><a href="#leadership" data-cursor="hover">Team</a></li>
+          <li><a href="#contact" class="nav-cta" data-cursor="hover">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="dot d1" data-parallax="0.4"></span>
+      <span class="dot d2" data-parallax="0.6"></span>
+      <span class="dot d3" data-parallax="0.3"></span>
+      <span class="dot d4" data-parallax="0.5"></span>
+      <span class="dot d5" data-parallax="0.7"></span>
+      <span class="dot d6" data-parallax="0.2"></span>
+      <span class="dot d7" data-parallax="0.55"></span>
+      <span class="dot d8" data-parallax="0.35"></span>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="live-badge stagger" style="--d:0ms">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>AFCON 2025 — Registrations open</span>
+        </span>
+        <span class="eyebrow stagger" style="--d:80ms">
+          <span class="eyebrow-line"></span>
+          African Community Northern Territory
+        </span>
+        <h1 class="hero-h1">
+          Celebrating <em class="serif">diversity</em>, talent &amp; unity in the Top End.
+        </h1>
+        <p class="lead stagger" style="--d:1100ms">
+          AFCOM NT works in partnership with individuals, communities, businesses and
+          governments to advance the health and wellbeing of Territorians — in particular
+          African people and people from low socio-economic backgrounds — by celebrating
+          their diversity and talents.
+        </p>
+        <div class="hero-cta stagger" style="--d:1240ms">
+          <a href="#register" class="btn btn-primary btn-magnetic" data-cursor="hover">
+            <span>Register for AFCON NT</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#about" class="btn btn-ghost btn-magnetic" data-cursor="hover">
+            <span>Discover our story</span>
+          </a>
+        </div>
+        <ul class="hero-stats stagger" style="--d:1380ms">
+          <li>
+            <span class="stat-num" data-count="2024" data-from="2018">2024</span>
+            <span class="stat-label">Year established</span>
+          </li>
+          <li>
+            <span class="stat-num"><span class="counter" data-count="2" data-from="0">2</span> <em class="serif">cities</em></span>
+            <span class="stat-label">Darwin &amp; Katherine</span>
+          </li>
+          <li>
+            <span class="stat-num"><span class="counter" data-count="100" data-from="0">100</span><em class="serif">%</em></span>
+            <span class="stat-label">Community-led</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-visual stagger" style="--d:300ms">
+        <div class="logo-stage">
+          <div class="logo-orbit"></div>
+          <div class="logo-orbit logo-orbit-2"></div>
+          <div class="logo-glow"></div>
+          <img src="assets/logo.jpeg" alt="AFCOM NT logo featuring a map of Africa surrounded by colourful dots" class="logo-img" />
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to content" data-cursor="hover">
+      <span class="scroll-cue-label">Scroll</span>
+      <span class="scroll-cue-line"></span>
+    </a>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Kenya <i>●</i></span>
+      <span class="marquee-item">Ghana <i>●</i></span>
+      <span class="marquee-item">Nigeria <i>●</i></span>
+      <span class="marquee-item">South Sudan <i>●</i></span>
+      <span class="marquee-item">Ethiopia <i>●</i></span>
+      <span class="marquee-item">South Africa <i>●</i></span>
+      <span class="marquee-item">Cameroon <i>●</i></span>
+      <span class="marquee-item">Senegal <i>●</i></span>
+      <span class="marquee-item">Sudan <i>●</i></span>
+      <span class="marquee-item">Zimbabwe <i>●</i></span>
+      <span class="marquee-item">Côte d'Ivoire <i>●</i></span>
+      <span class="marquee-item">Morocco <i>●</i></span>
+      <span class="marquee-item">Egypt <i>●</i></span>
+      <span class="marquee-item">Tunisia <i>●</i></span>
+      <span class="marquee-item">Uganda <i>●</i></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Kenya <i>●</i></span>
+      <span class="marquee-item">Ghana <i>●</i></span>
+      <span class="marquee-item">Nigeria <i>●</i></span>
+      <span class="marquee-item">South Sudan <i>●</i></span>
+      <span class="marquee-item">Ethiopia <i>●</i></span>
+      <span class="marquee-item">South Africa <i>●</i></span>
+      <span class="marquee-item">Cameroon <i>●</i></span>
+      <span class="marquee-item">Senegal <i>●</i></span>
+      <span class="marquee-item">Sudan <i>●</i></span>
+      <span class="marquee-item">Zimbabwe <i>●</i></span>
+      <span class="marquee-item">Côte d'Ivoire <i>●</i></span>
+      <span class="marquee-item">Morocco <i>●</i></span>
+      <span class="marquee-item">Egypt <i>●</i></span>
+      <span class="marquee-item">Tunisia <i>●</i></span>
+      <span class="marquee-item">Uganda <i>●</i></span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about" data-watermark="01">
+    <div class="container">
+      <header class="section-head" data-num="01">
+        <span class="kicker">About Us</span>
+        <h2>Who <em class="serif">we</em> are</h2>
+        <p>
+          African Community Northern Territory (AFCOM NT) is a newly formed not-for-profit
+          association from Darwin and Katherine. Established in 2024 by a group of young
+          individuals passionate about football and a shared vision of empowering African
+          people, communities and businesses in the NT.
+        </p>
+      </header>
+
+      <div class="vmv-grid">
+        <article class="vmv-card vmv-vision" data-cursor="hover">
+          <span class="vmv-roman">I</span>
+          <h3>Our Vision</h3>
+          <p>
+            A community where African people and people from low socio-economic backgrounds
+            live healthy, peacefully, connected and inspired to reach their full potential —
+            here in Australia and around the world.
+          </p>
+          <span class="vmv-line"></span>
+        </article>
+
+        <article class="vmv-card vmv-mission" data-cursor="hover">
+          <span class="vmv-roman">II</span>
+          <h3>Our Mission</h3>
+          <p>
+            Equip individuals and groups with the confidence and courage to undertake
+            social enterprises and economic activities that boost the Territory's economy
+            and social life — through partnership with communities, organisations,
+            businesses and governments.
+          </p>
+          <span class="vmv-line"></span>
+        </article>
+
+        <article class="vmv-card vmv-goal" data-cursor="hover">
+          <span class="vmv-roman">III</span>
+          <h3>Our Goal</h3>
+          <p>
+            Address health, social and economic problems faced by African people in the
+            Northern Territory of Australia through inclusive programs, sport and
+            community-led leadership.
+          </p>
+          <span class="vmv-line"></span>
+        </article>
+      </div>
+
+      <div class="values">
+        <div class="values-head">
+          <span class="kicker">Primary Values</span>
+          <h3>The four principles that <em class="serif">guide</em> everything we do.</h3>
+        </div>
+        <div class="values-grid">
+          <div class="value-card v-red" data-cursor="hover">
+            <span class="value-num">01</span>
+            <h4>A Fair Go</h4>
+            <p>Embrace mutual respect and tolerance for other cultures.</p>
+          </div>
+          <div class="value-card v-orange" data-cursor="hover">
+            <span class="value-num">02</span>
+            <h4>Diversity</h4>
+            <p>Embrace the diversity of people, ideas and innovations.</p>
+          </div>
+          <div class="value-card v-green" data-cursor="hover">
+            <span class="value-num">03</span>
+            <h4>Inspire</h4>
+            <p>Encourage individuals and groups to develop self-confidence.</p>
+          </div>
+          <div class="value-card v-blue" data-cursor="hover">
+            <span class="value-num">04</span>
+            <h4>Leadership</h4>
+            <p>Help young people develop team skills to reach their full potential.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AFCON ============ -->
+  <section class="section section-dark" id="afcon" data-watermark="02">
+    <div class="container">
+      <header class="section-head section-head-light" data-num="02">
+        <span class="kicker">AFCON NT</span>
+        <h2>African Cup of Nations — <em class="serif">Northern Territory</em></h2>
+        <p>
+          AFCON NT celebrates the rich heritage of African football through the Annual
+          African Cup of Nations, hosted in Darwin. A unique platform to showcase the
+          extraordinary football talents and diversity of African people living in the NT —
+          and a beacon of community strength bringing together diverse audiences in shared
+          celebration of sportsmanship and mutual respect.
+        </p>
+      </header>
+
+      <div class="obj-block">
+        <div class="obj-block-head">
+          <span class="kicker">Key Objectives</span>
+          <h3>Beyond the <em class="serif">scoreline</em>.</h3>
+        </div>
+        <div class="obj-grid">
+          <div class="obj-card" data-cursor="hover">
+            <span class="obj-num">01</span>
+            <p>Impact the health and wellbeing of young people.</p>
+          </div>
+          <div class="obj-card" data-cursor="hover">
+            <span class="obj-num">02</span>
+            <p>Mentor and monitor the progress of young people in our communities.</p>
+          </div>
+          <div class="obj-card" data-cursor="hover">
+            <span class="obj-num">03</span>
+            <p>Develop young leaders who can positively contribute to the NT community.</p>
+          </div>
+          <div class="obj-card" data-cursor="hover">
+            <span class="obj-num">04</span>
+            <p>Partner with local businesses, organisations and government agencies to bring value to the Territory.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="events-block">
+        <div class="obj-block-head">
+          <span class="kicker">Editions</span>
+          <h3>Two years of <em class="serif">celebration</em>.</h3>
+        </div>
+        <div class="events-grid">
+          <article class="event-card event-card-2024" data-cursor="hover">
+            <div class="event-media event-2024" role="img" aria-label="AFCON NT 2024 tournament">
+              <span class="event-year">2024</span>
+              <span class="event-corner"><em class="serif">Inaugural</em></span>
+            </div>
+            <div class="event-body">
+              <h4>AFCON NT 2024</h4>
+              <p>The inaugural African Cup of Nations Northern Territory — the first edition that brought together African communities across Darwin and Katherine through football, culture and celebration.</p>
+              <span class="event-tag">Photos coming soon</span>
+            </div>
+          </article>
+          <article class="event-card event-card-2025" data-cursor="hover">
+            <div class="event-media event-2025" role="img" aria-label="AFCON NT 2025 tournament">
+              <span class="event-year">2025</span>
+              <span class="event-corner"><em class="serif">Growing</em></span>
+            </div>
+            <div class="event-body">
+              <h4>AFCON NT 2025</h4>
+              <p>Building on a powerful first year, AFCON NT 2025 grew in scale and participation — more teams, more supporters and more shared moments of sportsmanship.</p>
+              <span class="event-tag">Photos coming soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="benefits">
+        <span class="kicker">Community Benefits</span>
+        <p class="benefits-quote">
+          "AFCON helps <em class="serif">unite</em> community, encourages participation as players, volunteers and sponsors, and <em class="serif">advances</em> local economic activity across the Northern Territory."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AFCOM EVENTS ============ -->
+  <section class="section" id="afcom-events" data-watermark="03">
+    <div class="container">
+      <header class="section-head" data-num="03">
+        <span class="kicker">AFCOM Events</span>
+        <h2>Bringing <em class="serif">community</em> together.</h2>
+        <p>
+          Beyond the football pitch, AFCOM NT delivers year-round programs and events
+          that showcase African culture, support youth development and create economic
+          opportunities for the Territory.
+        </p>
+      </header>
+
+      <div class="afcom-grid">
+        <article class="afcom-card afcom-large" data-cursor="hover">
+          <span class="afcom-tag">Cultural</span>
+          <h3>Cultural Celebrations</h3>
+          <p>Festivals, food, music and dance showcasing the rich heritage of African cultures across the NT — open to all Territorians.</p>
+          <span class="afcom-arrow">→</span>
+        </article>
+        <article class="afcom-card" data-cursor="hover">
+          <span class="afcom-tag">Youth</span>
+          <h3>Education &amp; Mentoring</h3>
+          <p>Mentoring, leadership programs and education support for young Africans living in the Territory.</p>
+          <span class="afcom-arrow">→</span>
+        </article>
+        <article class="afcom-card" data-cursor="hover">
+          <span class="afcom-tag">Business</span>
+          <h3>Enterprise &amp; Partnerships</h3>
+          <p>Connecting African entrepreneurs with local businesses, organisations and government agencies.</p>
+          <span class="afcom-arrow">→</span>
+        </article>
+        <article class="afcom-card afcom-large" data-cursor="hover">
+          <span class="afcom-tag">Wellbeing</span>
+          <h3>Health &amp; Wellbeing</h3>
+          <p>Programs that promote healthy living, social connection and community resilience — including sport, mental health and family support.</p>
+          <span class="afcom-arrow">→</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <section class="pull-quote-section" aria-label="Vision statement">
+    <div class="container">
+      <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+      <p class="quote-text">
+        We envision a community where African people and people from low socio-economic backgrounds live <em class="serif">healthy</em>, peacefully, connected and inspired to reach their <em class="serif">full potential</em>.
+      </p>
+      <span class="quote-attr">— Our Vision, AFCOM NT</span>
+    </div>
+  </section>
+
+  <!-- ============ SPONSORS ============ -->
+  <section class="section section-tinted" id="sponsors" data-watermark="04">
+    <div class="container">
+      <header class="section-head" data-num="04">
+        <span class="kicker">Sponsors</span>
+        <h2>Partner with <em class="serif">AFCOM NT</em>.</h2>
+        <p>
+          Sponsorship powers everything we do. From the AFCON NT tournament to
+          year-round community programs, our partners help us unite the community,
+          encourage participation, and advance local economic activity.
+        </p>
+      </header>
+
+      <div class="tier-grid">
+        <article class="tier-card tier-gold" data-cursor="hover">
+          <span class="tier-badge">Gold</span>
+          <h3>Champion Partner</h3>
+          <ul>
+            <li>Premium logo placement at AFCON NT</li>
+            <li>Naming rights on key events</li>
+            <li>Featured promotion across our channels</li>
+            <li>VIP hospitality at the tournament</li>
+          </ul>
+          <a href="#contact" class="btn-text" data-cursor="hover">
+            <span>Enquire</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+        <article class="tier-card tier-silver" data-cursor="hover">
+          <span class="tier-badge">Silver</span>
+          <h3>Community Partner</h3>
+          <ul>
+            <li>Logo on all match-day collateral</li>
+            <li>Recognition at AFCOM events</li>
+            <li>Social media spotlight features</li>
+            <li>Invitation to partner events</li>
+          </ul>
+          <a href="#contact" class="btn-text" data-cursor="hover">
+            <span>Enquire</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+        <article class="tier-card tier-bronze" data-cursor="hover">
+          <span class="tier-badge">Bronze</span>
+          <h3>Supporter</h3>
+          <ul>
+            <li>Logo on the AFCOM NT website</li>
+            <li>Mention in tournament program</li>
+            <li>Community newsletter feature</li>
+            <li>Certificate of recognition</li>
+          </ul>
+          <a href="#contact" class="btn-text" data-cursor="hover">
+            <span>Enquire</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+      </div>
+
+      <p class="sponsor-note">
+        Interested in a <em class="serif">custom</em> sponsorship package?
+        <a href="#contact" data-cursor="hover">Let's design one together →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ REGISTRATION ============ -->
+  <section class="section" id="register" data-watermark="05">
+    <div class="container reg-wrap">
+      <div class="reg-copy">
+        <header class="section-head section-head-left" data-num="05">
+          <span class="kicker">Tournament Registration</span>
+          <h2>Register your <em class="serif">team</em> for AFCON NT.</h2>
+          <p>
+            Bring your country, your club or your community onto the pitch. Registrations
+            for the next African Cup of Nations Northern Territory are open to teams from
+            Darwin, Katherine and across the Top End.
+          </p>
+        </header>
+        <ul class="reg-points">
+          <li><span class="check">✓</span> Open to all African nations &amp; allied community teams</li>
+          <li><span class="check">✓</span> Minimum squad of 11 players + reserves</li>
+          <li><span class="check">✓</span> Round-robin group stage followed by knockouts</li>
+          <li><span class="check">✓</span> Family-friendly cultural programming alongside matches</li>
+        </ul>
+      </div>
+
+      <form class="reg-form" id="regForm" novalidate>
+        <h3>Team Registration</h3>
+
+        <div class="form-row">
+          <label>
+            <span>Team / Country name</span>
+            <input type="text" name="team" required placeholder="e.g. Team Kenya" data-cursor="hover" />
+          </label>
+        </div>
+
+        <div class="form-row two">
+          <label>
+            <span>Team captain</span>
+            <input type="text" name="captain" required placeholder="Full name" data-cursor="hover" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" required placeholder="04XX XXX XXX" data-cursor="hover" />
+          </label>
+        </div>
+
+        <div class="form-row two">
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@example.com" data-cursor="hover" />
+          </label>
+          <label>
+            <span>Number of players</span>
+            <input type="number" name="players" min="11" max="30" required placeholder="11–30" data-cursor="hover" />
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span>Anything we should know?</span>
+            <textarea name="notes" rows="3" placeholder="Optional notes" data-cursor="hover"></textarea>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-magnetic" data-cursor="hover">
+          <span>Submit Registration</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ MEMBERSHIP ============ -->
+  <section class="section section-dark" id="membership" data-watermark="06">
+    <div class="container">
+      <header class="section-head section-head-light" data-num="06">
+        <span class="kicker">Membership</span>
+        <h2>Join the <em class="serif">AFCOM NT</em> family.</h2>
+        <p>
+          Become a member to support our mission, vote at general meetings, and stay
+          connected to the events and opportunities shaping the African community in
+          the Northern Territory.
+        </p>
+      </header>
+
+      <div class="member-grid">
+        <article class="member-card" data-cursor="hover">
+          <h3>Individual</h3>
+          <p class="member-price"><em class="serif">Free</em><span>/ year</span></p>
+          <ul>
+            <li>Open to all African Territorians &amp; allies</li>
+            <li>Voting rights at general meetings</li>
+            <li>Member-only event invitations</li>
+            <li>Monthly community newsletter</li>
+          </ul>
+          <a href="#contact" class="btn-text btn-text-light" data-cursor="hover">
+            <span>Become a Member</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+        <article class="member-card featured" data-cursor="hover">
+          <span class="featured-badge">Most Popular</span>
+          <h3>Family</h3>
+          <p class="member-price"><em class="serif">Free</em><span>/ year</span></p>
+          <ul>
+            <li>Covers up to 5 members of the same household</li>
+            <li>Full voting and event privileges</li>
+            <li>Discounted access to selected programs</li>
+            <li>Children's cultural &amp; sport programs</li>
+          </ul>
+          <a href="#contact" class="btn-text btn-text-light" data-cursor="hover">
+            <span>Become a Member</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+        <article class="member-card" data-cursor="hover">
+          <h3>Organisation</h3>
+          <p class="member-price"><em class="serif">Custom</em><span></span></p>
+          <ul>
+            <li>For community groups &amp; small businesses</li>
+            <li>Co-branded community initiatives</li>
+            <li>Speaking opportunities at events</li>
+            <li>Recognition across AFCOM channels</li>
+          </ul>
+          <a href="#contact" class="btn-text btn-text-light" data-cursor="hover">
+            <span>Get in touch</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEADERSHIP ============ -->
+  <section class="section" id="leadership" data-watermark="07">
+    <div class="container">
+      <header class="section-head" data-num="07">
+        <span class="kicker">Leadership Team</span>
+        <h2>Project <em class="serif">governance</em> &amp; key personnel.</h2>
+        <p>
+          AFCOM NT is led by a passionate team of community members from Darwin and
+          Katherine, committed to delivering on our mission, objectives and goals.
+        </p>
+      </header>
+
+      <div class="team-grid">
+        <article class="team-card" data-cursor="hover">
+          <div class="avatar avatar-red"><span>AA</span></div>
+          <p class="role">Chairman / President</p>
+          <h3>Augustino Amon</h3>
+          <p class="bio">Provides leadership and is ultimately responsible for ensuring AFCON NT works within our mission, objectives, goals, plan, constitution, rules and regulations.</p>
+        </article>
+        <article class="team-card" data-cursor="hover">
+          <div class="avatar avatar-orange"><span>WW</span></div>
+          <p class="role">Secretary</p>
+          <h3>Walter Wilton</h3>
+          <p class="bio">Main point of contact within AFCON NT for all matters relating to the association — providing information, instruction and coordination across topics.</p>
+        </article>
+        <article class="team-card" data-cursor="hover">
+          <div class="avatar avatar-yellow"><span>ZP</span></div>
+          <p class="role">Treasurer</p>
+          <h3>Zablon Pingo</h3>
+          <p class="bio">Manages the financial affairs of AFCON NT. Collects and protects cash and assets, and oversees all revenue and payments.</p>
+        </article>
+        <article class="team-card" data-cursor="hover">
+          <div class="avatar avatar-green"><span>EM</span></div>
+          <p class="role">Public Officer</p>
+          <h3>Emanuel Masimo</h3>
+          <p class="bio">Ensures documents are filed with the Commissioner of Consumer Affairs in accordance with the Act, and maintains a current copy of the Association's Constitution.</p>
+        </article>
+        <article class="team-card" data-cursor="hover">
+          <div class="avatar avatar-blue"><span>DA</span></div>
+          <p class="role">Event Coordinator &amp; Logistics</p>
+          <h3>Dau Achien</h3>
+          <p class="bio">Coordinates and delivers events and projects as required — planning, booking and scheduling everything from speakers to match-day logistics.</p>
+        </article>
+        <article class="team-card" data-cursor="hover">
+          <div class="avatar avatar-deep"><span>EZ</span></div>
+          <p class="role">Ordinary Member</p>
+          <h3>Eric Zaira</h3>
+          <p class="bio">Supports the committee across initiatives and helps deliver AFCOM NT's mission in the community.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-dark" id="contact" data-watermark="08">
+    <div class="container contact-grid">
+      <div>
+        <header class="section-head section-head-left section-head-light" data-num="08">
+          <span class="kicker">Contact</span>
+          <h2>Let's build <em class="serif">something</em> together.</h2>
+          <p>
+            Whether you're interested in playing, sponsoring, volunteering or joining as a
+            member, we'd love to hear from you.
+          </p>
+        </header>
+        <ul class="contact-list">
+          <li>
+            <strong>Location</strong>
+            <span>Darwin &amp; Katherine, Northern Territory, Australia</span>
+          </li>
+          <li>
+            <strong>Email</strong>
+            <a href="mailto:info@afcomnt.org.au" data-cursor="hover">info@afcomnt.org.au</a>
+          </li>
+          <li>
+            <strong>General enquiries</strong>
+            <span>Walter Wilton — Secretary</span>
+          </li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row two">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required data-cursor="hover" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required data-cursor="hover" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span>Subject</span>
+            <input type="text" name="subject" required data-cursor="hover" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" required data-cursor="hover"></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-magnetic" data-cursor="hover">
+          <span>Send Message</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-status" id="contactStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <h3>Ready to be part of <em class="serif">something bigger</em>?</h3>
+        <a href="#register" class="btn btn-primary btn-magnetic" data-cursor="hover">
+          <span>Get Involved</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.jpeg" alt="AFCOM NT logo" />
+          <p>African Community Northern Territory — celebrating diversity, talent and unity through community, culture and sport.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about" data-cursor="hover">About</a></li>
+            <li><a href="#afcon" data-cursor="hover">AFCON Events</a></li>
+            <li><a href="#afcom-events" data-cursor="hover">AFCOM Events</a></li>
+            <li><a href="#sponsors" data-cursor="hover">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Get involved</h4>
+          <ul>
+            <li><a href="#register" data-cursor="hover">Tournament Registration</a></li>
+            <li><a href="#membership" data-cursor="hover">Membership</a></li>
+            <li><a href="#leadership" data-cursor="hover">Leadership Team</a></li>
+            <li><a href="#contact" data-cursor="hover">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-meta">
+          <h4>AFCOM NT</h4>
+          <p>Darwin &amp; Katherine<br />Northern Territory, Australia</p>
+          <p><a href="mailto:info@afcomnt.org.au" data-cursor="hover">info@afcomnt.org.au</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wordmark-wrap" aria-hidden="true">
+      <div class="footer-wordmark">AFCOM<em class="serif">NT</em></div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> African Community Northern Territory (AFCOM NT). Crafted with care in the Top End.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
