@@ -310,14 +310,14 @@ p { margin: 0 0 1em; color: var(--muted); }
   transition: transform 1.2s var(--ease-out);
   will-change: transform;
 }
-.dot.d1 { width: 22px; height: 22px; background: var(--yellow); top: 18%; left: 8%; }
-.dot.d2 { width: 12px; height: 12px; background: var(--red); top: 70%; left: 12%; }
-.dot.d3 { width: 32px; height: 32px; background: var(--orange); top: 30%; left: 86%; }
-.dot.d4 { width: 14px; height: 14px; background: var(--green); top: 78%; left: 80%; }
-.dot.d5 { width: 18px; height: 18px; background: var(--blue); top: 12%; left: 60%; }
-.dot.d6 { width: 8px; height: 8px; background: var(--white); top: 50%; left: 4%; }
-.dot.d7 { width: 10px; height: 10px; background: var(--blue-deep); top: 60%; left: 50%; opacity: .7; }
-.dot.d8 { width: 6px; height: 6px; background: var(--white); top: 26%; left: 30%; opacity: .6; }
+.dot.d1 { width: 18px; height: 18px; background: var(--yellow); top: 18%; left: 8%; opacity: .65; }
+.dot.d2 { width: 10px; height: 10px; background: var(--yellow); top: 70%; left: 12%; opacity: .5; }
+.dot.d3 { width: 24px; height: 24px; background: var(--yellow); top: 30%; left: 86%; opacity: .55; }
+.dot.d4 { width: 12px; height: 12px; background: var(--yellow); top: 78%; left: 80%; opacity: .4; }
+.dot.d5 { width: 14px; height: 14px; background: var(--white); top: 12%; left: 60%; opacity: .25; }
+.dot.d6 { width: 6px; height: 6px; background: var(--white); top: 50%; left: 4%; opacity: .35; }
+.dot.d7 { width: 8px; height: 8px; background: var(--yellow); top: 60%; left: 50%; opacity: .3; }
+.dot.d8 { width: 5px; height: 5px; background: var(--white); top: 26%; left: 30%; opacity: .3; }
 
 .hero-grid {
   display: grid; grid-template-columns: 1.3fr 1fr; gap: 70px; align-items: center;
@@ -325,27 +325,40 @@ p { margin: 0 0 1em; color: var(--muted); }
 }
 
 .eyebrow {
-  display: inline-flex; align-items: center; gap: 14px;
-  font-size: .78rem; font-weight: 600;
-  letter-spacing: .18em; text-transform: uppercase;
-  color: rgba(255, 255, 255, .7);
-  margin-bottom: 28px;
+  display: inline-flex; align-items: center; gap: 16px;
+  font-size: .92rem; font-weight: 700;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255, 255, 255, .95);
+  margin-bottom: 32px;
 }
 .eyebrow-line {
-  width: 32px; height: 1px; background: var(--yellow);
+  width: 44px; height: 2px; background: var(--yellow);
   display: inline-block;
 }
 
-.hero h1 { color: var(--white); max-width: 13ch; margin-bottom: 32px; }
-.hero h1 .serif { color: var(--yellow); font-weight: 400; }
+.hero h1 { color: var(--white); max-width: 13ch; margin-bottom: 28px; }
+.hero h1 .serif { color: var(--yellow); font-weight: 300; font-style: italic; }
+
+.hero-rule {
+  display: block;
+  width: 64px; height: 2px;
+  background: linear-gradient(90deg, var(--yellow), rgba(245, 197, 24, 0));
+  margin: 4px 0 26px;
+  border-radius: 2px;
+}
 
 .lead {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, .78);
+  color: rgba(255, 255, 255, .82);
   max-width: 50ch;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 .hero-cta { display: flex; gap: 14px; margin: 36px 0 56px; flex-wrap: wrap; }
+.hero-cta .btn-primary {
+  padding: 18px 34px;
+  font-size: 1rem;
+  box-shadow: 0 18px 40px -16px rgba(233, 30, 80, .55);
+}
 
 .hero-stats {
   display: flex; gap: 50px; flex-wrap: wrap;
@@ -1162,8 +1175,9 @@ p { margin: 0 0 1em; color: var(--muted); }
   .nav-wrap { gap: 10px; }
   .brand-logo { width: 38px; height: 38px; }
   .brand-line-1 { font-size: .92rem; }
-  .live-badge { padding: 6px 12px 6px 10px; }
-  .eyebrow { margin-bottom: 22px; font-size: .72rem; }
+  .live-badge { padding: 8px 14px; font-size: .78rem; gap: 10px; }
+  .eyebrow { margin-bottom: 22px; font-size: .82rem; letter-spacing: .18em; }
+  .hero-rule { width: 48px; margin: 2px 0 20px; }
   .lead { font-size: 1rem; }
   .section-head { margin-bottom: 40px; }
   .footer-wordmark { font-size: 28vw; }
@@ -1229,20 +1243,32 @@ p { margin: 0 0 1em; color: var(--muted); }
   .hero h1.split-ready .word-inner { transform: none; }
 }
 
-/* --- Live status badge --- */
+/* --- Live status badge (tappable, links to register) --- */
 .live-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 7px 16px 7px 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: inline-flex; align-items: center; gap: 12px;
+  padding: 9px 16px 9px 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
-  font-size: 0.78rem; font-weight: 500;
+  font-size: 0.84rem; font-weight: 600;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--white);
   margin-bottom: 28px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
+.live-badge:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+.live-badge-arrow {
+  width: 14px; height: 14px;
+  color: var(--yellow);
+  transition: transform 0.35s var(--ease-out);
+}
+.live-badge:hover .live-badge-arrow { transform: translateX(3px); }
 .live-dot {
   position: relative;
   width: 8px; height: 8px; border-radius: 50%;
