@@ -445,7 +445,7 @@
 
   <!-- ============ REGISTRATION ============ -->
   <section class="section" id="register" data-watermark="05">
-    <div class="container reg-wrap">
+    <div class="container reg-wrap reg-wrap-centered">
       <div class="reg-copy">
         <header class="section-head section-head-left" data-num="05">
           <span class="kicker">Tournament Registration</span>
@@ -462,55 +462,70 @@
           <li><span class="check">✓</span> Round-robin group stage followed by knockouts</li>
           <li><span class="check">✓</span> Family-friendly cultural programming alongside matches</li>
         </ul>
+        <div class="reg-cta">
+          <button type="button" class="btn btn-primary" data-open-modal="regModal">
+            <span>Register your team</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="reg-cta-note">Takes about 2 minutes. We'll reply within 48 hours.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
+  <!-- ============ TEAM REGISTRATION MODAL ============ -->
+  <div class="modal" id="regModal" role="dialog" aria-modal="true" aria-labelledby="regModalTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="document">
+      <button type="button" class="modal-close" aria-label="Close" data-close-modal>
+        <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <header class="modal-head">
+        <span class="kicker">Tournament Registration</span>
+        <h3 id="regModalTitle">Team Registration</h3>
+        <p>Tell us about your team and we'll be in touch with next steps.</p>
+      </header>
       <form class="reg-form" id="regForm" novalidate>
-        <h3>Team Registration</h3>
-
         <div class="form-row">
           <label>
             <span>Team / Country name</span>
-            <input type="text" name="team" required placeholder="e.g. Team Kenya" data-cursor="hover" />
+            <input type="text" name="team" required placeholder="e.g. Team Kenya" />
           </label>
         </div>
-
         <div class="form-row two">
           <label>
             <span>Team captain</span>
-            <input type="text" name="captain" required placeholder="Full name" data-cursor="hover" />
+            <input type="text" name="captain" required placeholder="Full name" />
           </label>
           <label>
             <span>Phone</span>
-            <input type="tel" name="phone" required placeholder="04XX XXX XXX" data-cursor="hover" />
+            <input type="tel" name="phone" required placeholder="04XX XXX XXX" />
           </label>
         </div>
-
         <div class="form-row two">
           <label>
             <span>Email</span>
-            <input type="email" name="email" required placeholder="you@example.com" data-cursor="hover" />
+            <input type="email" name="email" required placeholder="you@example.com" />
           </label>
           <label>
             <span>Number of players</span>
-            <input type="number" name="players" min="11" max="30" required placeholder="11–30" data-cursor="hover" />
+            <input type="number" name="players" min="11" max="30" required placeholder="11–30" />
           </label>
         </div>
-
         <div class="form-row">
           <label>
             <span>Anything we should know?</span>
-            <textarea name="notes" rows="3" placeholder="Optional notes" data-cursor="hover"></textarea>
+            <textarea name="notes" rows="3" placeholder="Optional notes"></textarea>
           </label>
         </div>
-
-        <button type="submit" class="btn btn-primary btn-block btn-magnetic" data-cursor="hover">
+        <button type="submit" class="btn btn-primary btn-block">
           <span>Submit Registration</span>
           <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
-  </section>
+  </div>
 
   <!-- ============ MEMBERSHIP ============ -->
   <section class="section section-dark" id="membership" data-watermark="06">

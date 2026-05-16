@@ -208,6 +208,52 @@
   handleForm('contactForm', 'contactStatus',
     'Thanks for reaching out! We will reply as soon as possible.');
 
+  /* ---------- Modal ---------- */
+  (function modals() {
+    var lastFocus = null;
+
+    function openModal(id) {
+      var m = document.getElementById(id);
+      if (!m) return;
+      lastFocus = document.activeElement;
+      m.hidden = false;
+      requestAnimationFrame(function () { m.classList.add('open'); });
+      document.body.classList.add('modal-locked');
+      var focusable = m.querySelector('input, textarea, select, button:not(.modal-close)');
+      if (focusable) focusable.focus({ preventScroll: true });
+    }
+
+    function closeModal(m) {
+      if (!m) return;
+      m.classList.remove('open');
+      document.body.classList.remove('modal-locked');
+      setTimeout(function () {
+        m.hidden = true;
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus({ preventScroll: true });
+      }, 350);
+    }
+
+    document.querySelectorAll('[data-open-modal]').forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal(trigger.getAttribute('data-open-modal'));
+      });
+    });
+
+    document.querySelectorAll('[data-close-modal]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var m = el.closest('.modal');
+        closeModal(m);
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var open = document.querySelector('.modal.open');
+      if (open) closeModal(open);
+    });
+  })();
+
   /* ---------- Hero H1 word-by-word reveal ---------- */
   (function splitHeroH1() {
     var h1 = document.querySelector('.hero h1');

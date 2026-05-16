@@ -875,6 +875,17 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
 .reg-wrap {
   display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: start;
 }
+.reg-wrap-centered {
+  display: block;
+  max-width: 720px;
+}
+.reg-cta { margin-top: 36px; }
+.reg-cta .btn { padding: 18px 32px; font-size: 1rem; }
+.reg-cta-note {
+  margin: 14px 0 0;
+  font-size: .88rem;
+  color: var(--ink-soft);
+}
 .reg-copy .section-head { margin-bottom: 30px; }
 .reg-points { margin-top: 28px; }
 .reg-points li {
@@ -940,6 +951,80 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.65; }
 .form-status { margin: 16px 0 0; font-size: .9rem; min-height: 1.2em; }
 .form-status.ok { color: var(--green); }
 .form-status.err { color: var(--red); }
+
+/* ----------- Modal ----------- */
+.modal {
+  position: fixed; inset: 0;
+  z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s var(--ease-out);
+}
+.modal[hidden] { display: none; }
+.modal.open { opacity: 1; pointer-events: auto; }
+body.modal-locked { overflow: hidden; }
+
+.modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(31, 20, 16, .55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: 40px 36px 32px;
+  transform: translateY(16px) scale(.98);
+  transition: transform .4s var(--ease-out);
+}
+.modal.open .modal-panel { transform: translateY(0) scale(1); }
+
+.modal-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .25s var(--ease-out), transform .25s var(--ease-out);
+}
+.modal-close:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: rotate(90deg);
+}
+
+.modal-head { margin-bottom: 24px; }
+.modal-head .kicker { margin-bottom: 10px; }
+.modal-head h3 {
+  font-size: 1.55rem;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+.modal-head p { font-size: .96rem; margin: 0; color: var(--ink-soft); }
+
+.modal .reg-form {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+@media (max-width: 480px) {
+  .modal { padding: 16px; align-items: flex-start; padding-top: 56px; }
+  .modal-panel { padding: 32px 22px 24px; border-radius: var(--radius-lg); }
+  .modal-head h3 { font-size: 1.35rem; }
+}
 
 /* ----------- Membership ----------- */
 .member-grid {
