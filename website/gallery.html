@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery — moments from the Annual African Cup of Nations Northern Territory (AFCON NT) and AFCOM NT community programs across Darwin and Katherine." />
+  <title>Gallery — AFCOM NT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="gallery-page">
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <img src="assets/logo.jpeg" alt="" />
+    </div>
+  </div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="index.html#home" class="brand" aria-label="AFCOM NT home" data-cursor="hover">
+        <img src="assets/logo.jpeg" alt="AFCOM NT logo" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-line-1">AFCOM</span>
+          <span class="brand-line-2">Northern Territory</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#about" data-cursor="hover">About</a></li>
+          <li><a href="index.html#afcon" data-cursor="hover">AFCON</a></li>
+          <li><a href="index.html#afcom-events" data-cursor="hover">Programs</a></li>
+          <li><a href="gallery.html" class="is-active" aria-current="page" data-cursor="hover">Gallery</a></li>
+          <li><a href="index.html#sponsors" data-cursor="hover">Sponsors</a></li>
+          <li><a href="index.html#membership" data-cursor="hover">Membership</a></li>
+          <li><a href="index.html#leadership" data-cursor="hover">Team</a></li>
+          <li><a href="index.html#contact" data-cursor="hover">Contact</a></li>
+          <li><a href="index.html#register" class="nav-cta" data-cursor="hover">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ GALLERY HERO ============ -->
+  <section class="gallery-hero">
+    <div class="gallery-hero-bg" aria-hidden="true">
+      <span class="dot d1"></span>
+      <span class="dot d3"></span>
+      <span class="dot d5"></span>
+    </div>
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html#home" data-cursor="hover">Home</a>
+        <span aria-hidden="true">/</span>
+        <span>Gallery</span>
+      </nav>
+      <span class="kicker">Gallery</span>
+      <h1 class="gallery-title">Moments of <em class="serif">diversity</em>, talent &amp; unity.</h1>
+      <p class="gallery-lead">
+        A look back at the African Cup of Nations Northern Territory and the community
+        programs that bring Territorians together — football, culture, food, music and
+        the people who make it all happen across Darwin and Katherine.
+      </p>
+    </div>
+  </section>
+
+  <div class="kente-ribbon" aria-hidden="true"></div>
+
+  <!-- ============ AFCON NT 2024 ============ -->
+  <section class="section" id="gallery-2024">
+    <div class="container">
+      <header class="section-head section-head-left">
+        <span class="kicker">AFCON NT 2024</span>
+        <h2>The <em class="serif">inaugural</em> year.</h2>
+        <p>The first edition that brought African communities across the Top End together through football, culture and celebration. <span class="gallery-count" data-count-for="2024"></span></p>
+      </header>
+
+      <div class="gallery-grid" id="grid-2024" data-year="2024" data-label="AFCON NT 2024"></div>
+    </div>
+  </section>
+
+  <!-- ============ AFCON NT 2025 ============ -->
+  <section class="section section-tinted" id="gallery-2025">
+    <div class="container">
+      <header class="section-head section-head-left">
+        <span class="kicker">AFCON NT 2025</span>
+        <h2>The <em class="serif">second</em> edition.</h2>
+        <p>More teams, more supporters and more shared moments of sportsmanship from the 2025 tournament. <span class="gallery-count" data-count-for="2025"></span></p>
+      </header>
+
+      <div class="gallery-grid" id="grid-2025" data-year="2025" data-label="AFCON NT 2025"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTRIBUTE ============ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="gallery-intro gallery-contribute">
+        <span class="kicker">Help us tell the story</span>
+        <h2>Have photos from <em class="serif">AFCON NT</em>?</h2>
+        <p>
+          We're curating full photo galleries from the 2024 and 2025 tournaments. If you
+          captured the action, the culture or the community spirit, we'd love to feature
+          your shots — with credit.
+        </p>
+        <a href="index.html#contact" class="btn btn-gold" data-cursor="hover">
+          <span>Share your photos</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <h3>Ready to be part of <em class="serif">something bigger</em>?</h3>
+        <a href="index.html#register" class="btn btn-primary btn-magnetic" data-cursor="hover">
+          <span>Get Involved</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.jpeg" alt="AFCOM NT logo" />
+          <p>African Community Northern Territory — celebrating diversity, talent and unity through community, culture and sport.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#about" data-cursor="hover">About</a></li>
+            <li><a href="index.html#afcon" data-cursor="hover">AFCON Events</a></li>
+            <li><a href="index.html#afcom-events" data-cursor="hover">AFCOM Events</a></li>
+            <li><a href="gallery.html" data-cursor="hover">Gallery</a></li>
+            <li><a href="index.html#sponsors" data-cursor="hover">Sponsors</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Get involved</h4>
+          <ul>
+            <li><a href="index.html#register" data-cursor="hover">Tournament Registration</a></li>
+            <li><a href="index.html#membership" data-cursor="hover">Membership</a></li>
+            <li><a href="index.html#leadership" data-cursor="hover">Leadership Team</a></li>
+            <li><a href="index.html#contact" data-cursor="hover">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-meta">
+          <h4>AFCOM NT</h4>
+          <p>Darwin &amp; Katherine<br />Northern Territory, Australia</p>
+          <p><a href="mailto:info@afcomnt.org.au" data-cursor="hover">info@afcomnt.org.au</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wordmark-wrap" aria-hidden="true">
+      <div class="footer-wordmark">AFCOM<em class="serif">NT</em></div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> African Community Northern Territory (AFCOM NT). Crafted with care in the Top End.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button type="button" class="lb-close" aria-label="Close viewer" data-lb-close>
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lb-nav lb-prev" aria-label="Previous photo" data-lb-prev>
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="28" height="28"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lb-nav lb-next" aria-label="Next photo" data-lb-next>
+      <svg viewBox="0 0 24 24" aria-hidden="true" width="28" height="28"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lb-stage">
+      <img id="lbImg" alt="" />
+      <figcaption class="lb-meta" id="lbMeta"></figcaption>
+    </figure>
+  </div>
+
+  <script src="gallery-data.js"></script>
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>

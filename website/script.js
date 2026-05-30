@@ -93,6 +93,7 @@
   var revealTargets = document.querySelectorAll(
     '.vmv-card, .value-card, .obj-card, .event-card, .afcom-card, ' +
     '.tier-card, .member-card, .team-card, .reg-points li, .contact-list li, ' +
+    '.gallery-card, .gallery-intro, ' +
     '.section-head, .obj-block-head, .values-head, .benefits'
   );
   revealTargets.forEach(function (el) { el.classList.add('reveal'); });
@@ -106,7 +107,8 @@
     });
   }
   ['.vmv-grid','.values-grid','.obj-grid','.events-grid','.afcom-grid',
-   '.tier-grid','.member-grid','.team-grid','.reg-points','.contact-list']
+   '.tier-grid','.member-grid','.team-grid','.reg-points','.contact-list',
+   '.gallery-grid']
     .forEach(applyStagger);
 
   if ('IntersectionObserver' in window) {
